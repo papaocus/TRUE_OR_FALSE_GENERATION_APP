@@ -55,7 +55,7 @@ print('Test accuracy:', test_acc)
 # Define the Streamlit app
 st.title('True or False app')
 question = st.text_input('Enter your question:')
-if st.button('Predict'):
+if st.button('Submit'):
     transformed_question = tokenizer.texts_to_sequences([question])
     transformed_question = pad_sequences(transformed_question, padding='post', maxlen=maxlen)
     prediction = model.predict(transformed_question)
