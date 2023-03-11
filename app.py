@@ -53,7 +53,7 @@ test_loss, test_acc = model.evaluate(X_test, y_test, verbose=2)
 print('Test accuracy:', test_acc)
 
 # Define the Streamlit app
-st.title('Model Predictor')
+st.title('True or False app')
 question = st.text_input('Enter your question:')
 if st.button('Predict'):
     transformed_question = tokenizer.texts_to_sequences([question])
